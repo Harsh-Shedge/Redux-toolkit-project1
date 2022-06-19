@@ -1,0 +1,53 @@
+Youtube link:https://www.youtube.com/watch?v=XwGNhppX4as&t=2120s&ab_channel=Coder%27sGyan
+
+To install redux tool kit type "npm i @reduxjs/toolkit react-redux"
+
+Step 1 Create a folder in "src" named "store" and create a "slice" named
+"cartSlice.js" in it
+
+Slice is a feature of Redux Toolkit which allows us to organise
+our store data in small pieces
+
+CHECK CODE IN "cartSlice.js"
+
+Now we configure our store by having "store.js" in "store" folder
+
+CHECK CODE IN "store.js"
+
+
+IN "App.js" wrap all components inside a "Provider"
+
+
+INSIDE "App.js"
+
+<Provider store={store}>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+          </Routes>
+        </BrowserRouter>
+</Provider>
+
+NOW CHECK CODE INSIDE "src/components/Product.js" where we want to 
+access the initial state of "store/cartSlice.js" and the two methods
+
+
+THEN CHECK CODE AGAIN IN NAVBAR.JS
+
+IF WE WANT TO CHANGE THE "REDUX STORE" THEN WE HAVE TO DISPATCH THE ACTION
+
+TO UNDERSTAND ASYNCHRONOUS CALLS FROM REDUX STORE WATCH FROM 1 HOUR
+
+CHECK CODE IN "productSlice.js"
+
+WE NEVER DO ASYNCHRONOUS CALLS INSIDE REDUCER AS THET ARE PURE FUNCTION
+FOR ASYNCHRONOUS CALLS WE USE "THUNK MIDDLEWARE"
+
+CHECK CODE IN "productSlice.js"
+
+THUNK is a function and inside it we return a new function
+
+
+TO CREATE THUNK USING REDUX TOOLKIT WATCH FROM 1:01:00 MAYBE
